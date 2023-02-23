@@ -20,7 +20,7 @@ class ExchangeRateApiClientAdapter(
 ) : ExchangeRateApiClientPort {
     override suspend fun getRate(source: Currency, target: Currency): ExchangeRateDto =
         getRate(source to target).let { (_, currency, factor) ->
-            ExchangeRateDto(factor.toDouble().toBigDecimal(), Currency.valueOf(currency.toUpperCase()))
+            ExchangeRateDto(factor.toDouble().toBigDecimal(), Currency.valueOf(currency.uppercase()))
         }
 
     private suspend fun getRate(currencyPair: Pair<Currency, Currency>): ExchangeRateApiResponse =

@@ -3,10 +3,10 @@ package com.github.jeroenr.hexagonal.infrastructure.boundaries.outbound.mongodb.
 import com.github.jeroenr.hexagonal.domain.model.Currency
 import com.github.jeroenr.hexagonal.domain.model.Money
 import com.github.jeroenr.hexagonal.domain.model.UserAccountDto
+import jakarta.persistence.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.math.BigDecimal
 import java.time.Instant
-import javax.persistence.Id
 
 /**
  * Sample entity
