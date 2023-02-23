@@ -1,0 +1,9 @@
+# override default configuration for local environment
+spring:
+  application:
+    name: kotlin-service
+  ##Properties for Mongo
+  data:
+    mongodb:
+      database: MY_DB
+      uri: mongodb://mongoadmin:123456root@localhost:27017/?serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-256&3t.uriVersion=3&3t.alwaysShowAuthDB=true&3t.alwaysShowDBFromUserRole=true

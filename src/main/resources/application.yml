@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: kotlin-service-template
+  ##Properties for Mongo
+  data:
+    mongodb:
+      database: MY_DB
+      uri:
+      auto-index-creation: true
+
+server:
+  port: 8080
+  application:
+    name: kotlin-service-template
+
+# example config
+exchange-rate:
+  api:
+    endpoint:
+    client-id:
+    client-secret:

@@ -1,0 +1,26 @@
+Configuration:
+  name: kotlin-service-template
+  Properties:
+    Property:
+      name: log-path
+      value: "target"
+  Appenders:
+    Console:
+      name: Console_Appender
+      target: SYSTEM_OUT
+      PatternLayout:
+        pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - tx.id=%X{x-transaction-id}%n - %msg%n"
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        - ref: Console_Appender
+    Logger:
+      - name: reactor.netty.http.client
+        level: info
+        AppenderRef:
+          - ref: Console_Appender
+      - name: com.github.jeroenr.hexagonal
+        level: info
+        AppenderRef:
+          - ref: Console_Appender
